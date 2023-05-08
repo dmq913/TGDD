@@ -887,6 +887,10 @@ header {
 
 
 /* Tech new  */
+.tech-list {
+    list-style-type: disc;
+}
+
 .tech-new {
     margin-top: 30px;
     display: flex;
@@ -1182,7 +1186,7 @@ footer {
 
 .logo-footer {
     background-image: url(/assets/image/footer/Logo-webmoi.webp);
-    width: 345px;
+    /* width: 345px; */
     height: 90px;
     background-size: cover;
 }

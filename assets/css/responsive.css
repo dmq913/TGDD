@@ -27,6 +27,7 @@
     }
 
 
+
     .has-list::after {
         /* border: 6px solid transparent; */
         display: none;
@@ -59,7 +60,7 @@
     }
 
     .header-form {
-        width: 90%;
+        width: 100%;
     }
 
     .header__search {
@@ -69,12 +70,16 @@
         color: var(--text-color);
         font-size: 1.1rem;
         display: block;
-        width: 100%;
+        width: 90%;
         z-index: 2;
     }
 
     .header__input {
-        width: 90%;
+        width: 100%;
+    }
+
+    .header__body-item .stair::after {
+        display: none;
     }
 
     /* Mobile icon  */
@@ -159,6 +164,20 @@
 
     /* End Header  */
 
+    /* Home slider  */
+    .home-slider {
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 0;
+        position: relative;
+        top: -300px;
+        flex-direction: column;
+    }
+
+    .home-slider-img {
+        border-radius: 0;
+    }
+
     /* Banner top  */
     .banner-top a {
         width: 100%;
@@ -175,10 +194,7 @@
     /* Banner top  */
 
     /* Home slider  */
-    .home-slider {
-        position: relative;
-        top: -300px;
-    }
+
 
     /* Home slider  */
 
@@ -289,7 +305,7 @@
     }
 
     .hot-product.main-product {
-        margin-bottom: 2200px;
+        margin-bottom: 1900px;
         background-color: #eee;
     }
 
@@ -343,7 +359,8 @@
 
     .product-monopoly,
     .product-justreleased {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
     }
 
 
@@ -362,7 +379,7 @@
     }
 
     .featured-category-item {
-        width: 20vh;
+        width: 25vh;
         padding: 10px 0;
     }
 
@@ -382,10 +399,7 @@
         /* margin-bottom: 100px; */
     }
 
-    .home-slider {
-        flex-direction: column;
-        /* margin-bottom: 160px; */
-    }
+
 
     .discount-img {
         margin-top: 200px;
@@ -407,6 +421,14 @@
     /* Tech new  */
     .tech {
         border-radius: 0;
+    }
+
+    .tech-new {
+        height: auto;
+    }
+
+    .tech-list {
+        list-style-type: disc;
     }
 
     .tech-new .body:hover {

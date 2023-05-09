@@ -1230,6 +1230,7 @@ footer {
     display: none;
     justify-content: center;
     align-items: center;
+    overflow-y: initial;
 }
 
 .location-box {
@@ -1238,9 +1239,9 @@ footer {
     max-height: 80vh;
     background-color: #fff;
     border-radius: 8px;
+    display: block;
     overflow: hidden;
     animation: fadeIn .6s ease-out;
-    z-index: 10;
 }
 
 .location-head {
@@ -1312,17 +1313,18 @@ footer {
 .list-location {
     display: flex;
     padding: 0 10px;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .list-location__left,
 .list-location__right {
     flex: 1;
-    /* overflow: auto; */
+    overflow-y: auto;
 }
 
 .location-list {
     overflow: auto;
+    overflow-y: auto;
 }
 
 .location-item a {

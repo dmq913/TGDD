@@ -9,8 +9,8 @@
 
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
     <link rel="shortcut icon" href="./assets/image/icon/Thegioididong-Logo-PNG-2.png" type="image/x-icon">
@@ -29,7 +29,7 @@
                         </a>
                         <img src="./assets/image/logo/Thegioididong-Logo-PNG-2.png" alt="" width="31" height="31"
                             class="header__sub-logo-img hide-on-pc">
-                        <a href="#" class="header__address js-header__address">
+                        <a href="#" class="header__address js-header__address" id="js-header__address">
                             <span class="hide-on-mobile-and-tablet"> Xem giá, tồn kho tại:</span>
                             <br>
                             <strong>
@@ -67,12 +67,13 @@
                             <li class="header__list-top-item"><a href="">Game App</a></li>
                         </ul>
 
-                        <div class="mobile-menu hide-on-pc">
+                        <div class="mobile-menu hide-on-pc js-mobile-menu">
                             <i class="fa-solid fa-bars mobile-menu-icon"></i>
                             <p class="mobile-menu-text">Menu</p>
                         </div>
                     </div>
                 </div>
+
 
 
                 <div class="header__body">
@@ -233,7 +234,63 @@
         </header>
         <!-- End header  -->
 
+        <div class="menu-mobile hide-on-pc js-menu-mobile">
+            <a href="#" class="menu-mobile-close js-menu-mobile-close">
+                <i class="fa-solid fa-xmark close-icon"></i>
+                Đóng
+            </a>
+            <ul class="menu-mobile_list">
+                <li class="menu-mobile_item"><a href="">Điện thoại</a>
+                    <div class="discount">-10%</div>
+                </li>
+                <li class="menu-mobile_item"><a href="">Laptop</a></li>
+                <li class="menu-mobile_item"><a href="">Tablet</a></li>
+                <li class="menu-mobile_item"><a href="">Phụ kiện</a>
+                    <div class="discount">-5%</div>
+                </li>
+                <li class="menu-mobile_item"><a href="">Đồng hồ thông minh</a></li>
+                <li class="menu-mobile_item"><a href="">Máy tính bộ</a></li>
+                <li class="menu-mobile_item"><a href="">Màn hình máy tính</a></li>
+                <li class="menu-mobile_item"><a href="">Máy in</a></li>
+                <li class="menu-mobile_item">
+                    <a href="">Mực in</a>
+                    <div class="discount">
+                        -3%
+                    </div>
+                </li>
+                <li class="menu-mobile_item"><a href="">Đồng hồ thời trang</a></li>
+                <li class="menu-mobile_item"><a href="">Sạc dự phòng</a></li>
+                <li class="menu-mobile_item"><a href="">Tai nghe</a></li>
+                <li class="menu-mobile_item"><a href="">Máy cũ giá rẻ</a></li>
+                <li class="menu-mobile_item"><a href="">Sim, thẻ cào</a></li>
+                <li class="menu-mobile_item"><a href="">Dịch vụ, tiện ích</a></li>
+            </ul>
 
+            <div class="mobile-menu_body">
+                <div class="mobile-menu-left">
+                    <b>Nhóm hàng mới</b>
+                    <br>
+                    <a href="">Máy chiếu</a>
+                    <a href="">Thiết bị thông minh</a>
+                    <a href="">Thẻ cào giảm đến 3%</a>
+                </div>
+                <div class="mobile-menu-right">
+                    <b>Thế giới công nghệ</b>
+                    <br>
+                    <a href="">24h công nghệ</a>
+                    <a href="">Game App</a>
+                    <a href="">Hỏi đáp</a>
+                </div>
+            </div>
+
+            <div class="border-bot"></div>
+
+            <div class="mobile-menu_footer">
+                <a href="" style="display: block;font-size: 1.5rem;">Lịch sử mua hàng</a>
+                <span style="display: block;">Tổng đài <a href="">1800. 1060</a> (7:30 - 22:00)</span>
+                <span>Xem <a href="">3384 siêu thị</a> (8:00 - 22:00)</span>
+            </div>
+        </div>
         <!-- Banner top  -->
         <div class="banner-top">
             <a href="">
@@ -1243,7 +1300,7 @@
                                 </a>
                             </li>
                             <li class="tech-item">
-                                <img src="./assets/image/tech-new/ịvsd-060423-181845-200x200.webp" alt=""
+                                <img src="./assets/image/tech-new/ịvsd-060423-181845-200x200.webp" alt=""
                                     class="tech-img hide-on-mobile-and-tablet">
 
                                 <a href="">
@@ -1308,11 +1365,11 @@
                                 </form>
                                 <p class="form-note">*Áp dụng cho khách lần đầu mua hàng tại BachHoaXANH</p>
                             </div>
-                            <img src="./assets/image/bhx/BOX-TRUYỀN-THÔNG-280x440-TGDDxBHX--1--280x440.webp" alt=""
+                            <img src="./assets/image/bhx/BOX-TRUYỀN-THÔNG-280x440-TGDDxBHX--1--280x440.webp" alt=""
                                 class="product-img-bot hide-on-mobile-and-tablet">
-                            <img src="./assets/image/bhx/BOX-TRUYỀN-THÔNG-280x440-TGDDxBHX--2--280x440.webp" alt=""
+                            <img src="./assets/image/bhx/BOX-TRUYỀN-THÔNG-280x440-TGDDxBHX--2--280x440.webp" alt=""
                                 class="product-img-bot hide-on-mobile-and-tablet">
-                            <img src="./assets/image/bhx/BOX-TRUYỀN-THÔNG-280x440-TGDDxBHX--3--280x440.webp" alt=""
+                            <img src="./assets/image/bhx/BOX-TRUYỀN-THÔNG-280x440-TGDDxBHX--3--280x440.webp" alt=""
                                 class="product-img-bot hide-on-mobile-and-tablet">
                             <img src="./assets/image/bhx/Untitled-1--1--280x440.webp" alt=""
                                 class="product-img-bot hide-on-mobile-and-tablet">
@@ -1425,7 +1482,7 @@
         <!-- Footer  -->
     </div>
 
-    <div class="modal js-modal">
+    <div class="modal js-modal" id="js-modal">
         <div class="location-box">
             <div class="location-head">
                 <div class="location-head__top">
@@ -1433,7 +1490,7 @@
                         xác
                         thời gian
                         giao hàng</p>
-                    <a href="#" class="location-close js-location-close">
+                    <a href="#" class="location-close js-location-close" id="js-location-close">
                         <i class="fa-solid fa-xmark close-icon"></i>
                         <span>Đóng</span>
                     </a>
@@ -1545,6 +1602,26 @@
         // headerAddress.addEventListener('click', openModal);
         headerAddress.addEventListener('click', openModal);
         closeModal.addEventListener('click', hideModal);
+    </script>
+
+    <script>
+        const mobileMenu = document.querySelector('.js-mobile-menu');
+
+        const menuMoblie = document.querySelector('.js-menu-mobile');
+        console.log(modal);
+
+        const closeMenu = document.querySelector('.js-menu-mobile-close');
+        console.log(closeModal);
+
+        function openModal() {
+            menuMoblie.classList.add('open');
+        }
+        function hideModal() {
+            menuMoblie.classList.remove('open');
+        }
+        // headerAddress.addEventListener('click', openModal);
+        mobileMenu.addEventListener('click', openModal);
+        closeMenu.addEventListener('click', hideModal);
     </script>
 </body>
 

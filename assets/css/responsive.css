@@ -26,6 +26,13 @@
         min-height: auto;
     }
 
+    /* Modal */
+    .location-box {
+        max-width: 478px;
+        height: 400px;
+        max-height: 80vh;
+    }
+
     .defaut-location {
         max-width: 380px;
     }
@@ -608,6 +615,16 @@
     }
 
     .input-location {
-        font-size: 1.4rem;
+        font-size: 1.0rem;
+    }
+
+    /* .menu-mobile {
+        width: 100vw;
+        height: 100vh;
+    } */
+
+    /* Open mobile menu category  */
+    .open {
+        transform: translateX(0);
     }
 }

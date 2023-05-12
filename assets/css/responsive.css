@@ -267,8 +267,12 @@
         background-color: #eee;
     }
 
-    .hot-product .product-item {
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    .hot-product .product-item a {
+        background-color: var(--white-color);
+    }
+
+    .product-item .item>a:hover .product-img {
+        transform: translateY(0);
     }
 
     .hot-product.flash-sale .item {
@@ -625,6 +629,6 @@
 
     /* Open mobile menu category  */
     .open {
-        transform: translateX(0);
+        display: block;
     }
 }

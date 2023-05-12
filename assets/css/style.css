@@ -1365,8 +1365,20 @@ footer {
     left: 0;
     right: 0;
     z-index: 1;
-    transform: translateX(440px);
-    transition: transform .5s linear;
+    display: none;
+    animation: slideInRight .5s linear;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .menu-mobile-close {
@@ -1429,6 +1441,10 @@ footer {
     /* line-height: ; */
 }
 
+.menu-mobile_item a:hover .menu-mobile_item {
+    background-color: #288ad6;
+}
+
 .mobile-menu_body {
     margin: 20px 10px 0;
     display: flex;
@@ -1472,4 +1488,9 @@ footer {
 
 .mobile-menu_footer a {
     color: #288ad6;
+    margin-bottom: 5px;
+}
+
+.mobile-menu_footer span {
+    margin: 5px 0;
 }

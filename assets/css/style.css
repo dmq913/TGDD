@@ -568,14 +568,14 @@ header {
     height: 45px;
     width: 45px;
     position: absolute;
-    top: 2100px;
+    top: 2150px;
     transform: translateY(0);
-    transition: ease .2s;
+    transition: linear .3s;
 }
 
 .product-item .item a:hover .product-justreleased,
 .product-item .item a:hover .product-monopoly {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 
 
@@ -1237,9 +1237,11 @@ footer {
     background-color: #fff;
     border-radius: 8px;
     display: block;
-    overflow: hidden;
     animation: fadeIn .6s ease-out;
+    overflow: hidden;
 }
+
+
 
 .location-head {
     background-color: #2f80ed;
@@ -1310,18 +1312,21 @@ footer {
 .list-location {
     display: flex;
     padding: 0 10px;
-    overflow-y: auto;
-}
-
-.list-location__left,
-.list-location__right {
-    flex: 1;
-    overflow-y: auto;
+    height: 1000px;
+    overflow-y: scroll;
 }
 
 .location-list {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-height: 39vh;
     overflow: auto;
-    overflow-y: auto;
+}
+
+.location-list::-webkit-scrollbar {
+    display: none;
 }
 
 .location-item a {

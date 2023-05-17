@@ -30,7 +30,7 @@
     .location-box {
         max-width: 478px;
         height: 400px;
-        max-height: 80vh;
+        max-height: 100vh;
     }
 
     .defaut-location {
@@ -60,7 +60,7 @@
     }
 
     .header__body-list {
-        margin: 0 auto;
+        margin: 4px auto 0;
         display: flex;
         justify-content: space-around;
     }
@@ -593,6 +593,10 @@
         left: 0;
         right: 0;
         z-index: 100;
+    }
+
+    .location-list {
+        min-height: 70vh;
     }
 
     .js-header__address {

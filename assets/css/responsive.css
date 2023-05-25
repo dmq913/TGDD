@@ -26,6 +26,7 @@
         min-height: auto;
     }
 
+
     /* Modal */
     .location-box {
         max-width: 478px;
@@ -79,6 +80,7 @@
 
     .header-form {
         width: 100%;
+        margin-bottom: 4px;
     }
 
     .header__search {
@@ -281,15 +283,10 @@
 
     .hot-product.flash-sale .product-item {
         padding: 4px 4px 0;
-        border-radius: 4px;
     }
 
-    .hot-product.flash-sale .label-info {}
 
-    .hot-product.flash-sale .product-img {
-        /* width: 120px;
-        height: 120px; */
-    }
+
 
     /* Xiaomi  */
     .about-xiaomi {
@@ -320,7 +317,6 @@
 
     .hot-product.xiaomi-product .product-item {
         padding: 4px 4px 0;
-        border-radius: 4px;
     }
 
 
@@ -351,7 +347,29 @@
 
     .hot-product.main-product .product-item {
         padding: 0 4px;
-        border-radius: 4px;
+    }
+
+    .product-item .item {
+        box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    .price-discount {
+        position: absolute;
+        top: 50%;
+        left: calc(70% - 20px)
+    }
+
+    .vote-product {
+        padding-bottom: 12px;
+    }
+
+    .result-label {
+        padding: 0 8px 0 0;
+        margin-top: 4px;
+    }
+
+    .result-label span {
+        font-size: .9rem;
     }
 
     /* Flash sale  */
@@ -623,7 +641,16 @@
     }
 
     .input-location {
-        font-size: 1.0rem;
+        /* display: block; */
+        /* width: 50vw; */
+        /* padding: 0 1.25rem; */
+    }
+
+    /* .input-location, */
+    .input-location::placeholder {
+        /* font: 1.25rem/3 sans-serif; */
+        font-size: 1.4rem;
+        font-family: sans-serif;
     }
 
     /* .menu-mobile {

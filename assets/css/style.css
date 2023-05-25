@@ -390,9 +390,6 @@ header {
     overflow-y: hidden;
 }
 
-.product-stage::-webkit-scrollbar {
-    /* display: none; */
-}
 
 .no-wrap {
     flex-wrap: nowrap;
@@ -430,6 +427,62 @@ header {
 .product-info {
     margin-top: 20px;
     position: relative;
+}
+
+.result-label {
+    /* display: flex; */
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 100%;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.result-label.tem1 {
+    background: linear-gradient(to right, #e91f63, #db2663);
+}
+
+.result-label.tem2 {
+    background: linear-gradient(to right, #3bacf0, #1b6dc1);
+
+}
+
+.result-label.tem3 {
+    background: linear-gradient(to right, #af63cf, #3327a7);
+}
+
+
+.result-label span {
+    font-size: 1rem;
+    color: var(--white-color);
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* line-height: 1.4rem; */
+    padding-top: 4px;
+    margin-left: 4px;
+    float: right;
+}
+
+.result-label img {
+    /* margin-top: 2px; */
+    display: inline;
+}
+
+.vote-product b {
+    color: #fb6e2e;
+    font-size: 1.4rem;
+    margin-right: 2px;
+}
+
+.vote-product i {
+    color: #fb6e2e;
+    margin-right: 4px;
+}
+
+.vote-product span {
+    font-size: 1.4rem;
+    color: #999;
 }
 
 .preoder {
@@ -477,6 +530,17 @@ header {
     font-size: 1.4rem;
     font-weight: 300;
     color: var(--text-color);
+}
+
+.price-discount {
+    color: #eb5757;
+    background: #fff0e9;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding: 2px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
 }
 
 .read-more {
@@ -559,22 +623,24 @@ header {
     overflow-x: scroll;
 }
 
-.main-product .product-item>a {
+.hot-product .product-item a {
     position: relative;
 }
 
-.main-product .product-justreleased,
-.main-product .product-monopoly {
+.hot-product .product-justreleased,
+.hot-product .product-monopoly,
+.hot-product .product-guarantee {
     height: 45px;
     width: 45px;
     position: absolute;
-    top: 2150px;
+    top: 170px;
     transform: translateY(0);
     transition: linear .3s;
 }
 
 .product-item .item a:hover .product-justreleased,
-.product-item .item a:hover .product-monopoly {
+.product-item .item a:hover .product-monopoly,
+.product-item .item a:hover .product-guarantee {
     transform: translateY(-5px);
 }
 
@@ -746,10 +812,40 @@ header {
 
 
 .home-slider {
-    display: flex;
+    /* display: flex; */
     margin-top: 110px;
-    justify-content: space-between;
+    max-width: 1200px;
+    overflow: hidden;
 }
+
+.box-image {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.box-image:nth-child(2),
+.box-image:nth-child(3) {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 
 .discount-img {
     width: 380px;
@@ -758,54 +854,43 @@ header {
 }
 
 .onl-nav {
-    position: absolute;
+    position: relative;
 }
 
 .onl-prev,
 .onl-next {
-    height: 44px;
     width: 44px;
-    background-color: #fff;
-    border: 1px solid #e1e1e1;
+    height: 44px;
+    background-color: white;
+    border: none;
     border-radius: 50%;
-    opacity: .7;
-    filter: drop-shadow(0 4px 7px rgba(0, 0, 0, .15));
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
+    position: absolute;
+    top: -200px;
+    box-shadow: 6px 0 4px rgba(0, 0, 0, .05), 4px 0 4px rgba(0, 0, 0, .09);
+    filter: drop-shadow(0 4px 7px rgba(0, 0, 0, .15));
 }
 
 .onl-prev {
-    left: -18px;
+    left: -25px;
+    transform: rotate(-45deg);
 }
 
 .onl-next {
-    left: calc(100% - 18px);
+    right: -20px;
+    transform: rotate(135deg);
 }
 
 .onl-prev span::after,
 .onl-next span::after {
-    content: '';
     display: block;
-    position: absolute;
+    content: '';
     height: 8px;
     width: 8px;
-    border-left: 2px solid #666;
     border-top: 2px solid #666;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 50%;
-}
-
-.onl-prev span::after {
-    transform: rotate(325deg);
-}
-
-.onl-next span::after {
-    transform: rotate(135deg);
+    border-left: 2px solid #666;
 }
 
 /* Discount payonl */
@@ -1314,6 +1399,10 @@ footer {
     padding: 0 10px;
     height: 1000px;
     overflow-y: scroll;
+}
+
+.list-location::-webkit-scrollbar {
+    display: none;
 }
 
 .location-list {

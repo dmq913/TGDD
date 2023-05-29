@@ -386,8 +386,12 @@ header {
 .product-stage {
     display: flex;
     margin: 0 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     overflow-y: hidden;
+}
+
+.product-stage::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -620,7 +624,7 @@ header {
 }
 
 .hot-product.xiaomi-product .product-stage {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .hot-product .product-item a {
@@ -796,7 +800,7 @@ header {
 
 .hot-product.flash-sale .product-stage {
     padding: 20px 0;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 

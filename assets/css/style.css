@@ -333,13 +333,37 @@ header {
 }
 
 /* Home slider */
-.home-slider {
+.home-wrapper {
     position: relative;
     top: -90px;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.home-slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: transform .5s linear;
+    user-select: none;
+}
+
+.home-slider-item {
+    flex: 1 0 100%;
+    display: flex;
+}
+
+.home-slider-one {
+    margin-right: 40px;
+}
+
+.home-slider-one:last-child {
+    margin-right: 0;
 }
 
 .home-slider-img {
     border-radius: 10px;
+    user-select: none;
 }
 
 /* Opiton promotion  */
@@ -381,13 +405,18 @@ header {
     background-color: var(--yelow-color);
     height: 550px;
     border-radius: 16px;
+    position: relative;
 }
 
 .product-stage {
     display: flex;
     margin: 0 10px;
-    /* overflow-x: scroll; */
     overflow-y: hidden;
+    /* scroll-behavior: smooth; */
+}
+
+.smooth {
+    scroll-behavior: smooth;
 }
 
 .product-stage::-webkit-scrollbar {
@@ -623,10 +652,6 @@ header {
     background-color: var(--orange-color);
 }
 
-.hot-product.xiaomi-product .product-stage {
-    /* overflow-x: scroll; */
-}
-
 .hot-product .product-item a {
     position: relative;
 }
@@ -648,7 +673,32 @@ header {
     transform: translateY(-5px);
 }
 
+.btn-right,
+.btn-left {
+    font-size: 2rem;
+    background-color: #fff;
+    line-height: 4rem;
+    text-align: center;
+    padding: 20px 10px;
+    opacity: .6;
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    box-shadow: -6px 0 4px rgba(0, 0, 0, .05), -4px 0 4px rgba(0, 0, 0, .09);
+    z-index: 1;
+}
 
+
+.btn-left {
+    border-radius: 4px 0 0 4px;
+    left: -10px;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-right {
+    border-radius: 0 4px 4px 0;
+    right: -10px;
+}
 
 /* Featured Category */
 .featured-category {
@@ -801,6 +851,7 @@ header {
 .hot-product.flash-sale .product-stage {
     padding: 20px 0;
     /* overflow-x: scroll; */
+
 }
 
 
@@ -814,41 +865,24 @@ header {
     height: 300px;
 }
 
+.box-wrapper {
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 20px;
+}
 
 .home-slider {
-    /* display: flex; */
-    margin-top: 110px;
-    max-width: 1200px;
-    overflow: hidden;
+    /* margin-top: 110px; */
+    display: flex;
 }
 
 .box-image {
+    gap: 20px;
+    flex: 1 0 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    gap: 20px;
 }
 
-.box-image:nth-child(2),
-.box-image:nth-child(3) {
-    display: none;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
 
 
 .discount-img {
@@ -872,7 +906,7 @@ header {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -200px;
+    top: -120px;
     box-shadow: 6px 0 4px rgba(0, 0, 0, .05), 4px 0 4px rgba(0, 0, 0, .09);
     filter: drop-shadow(0 4px 7px rgba(0, 0, 0, .15));
 }
@@ -1271,7 +1305,7 @@ footer {
 }
 
 .logo-footer {
-    background-image: url(/assets/image/footer/Logo-webmoi.webp);
+    background-image: url(../image/footer/Logo-webmoi.webp);
     /* width: 345px; */
     height: 90px;
     background-size: cover;

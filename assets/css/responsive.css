@@ -191,19 +191,6 @@
 
     /* End Header  */
 
-    /* Home slider  */
-    .home-slider {
-        margin-left: 0px;
-        margin-right: 0px;
-        border-radius: 0;
-        position: relative;
-        top: -300px;
-        flex-direction: column;
-    }
-
-    .home-slider-img {
-        border-radius: 0;
-    }
 
     /* Banner top  */
     .banner-top a {
@@ -220,14 +207,49 @@
 
     /* Banner top  */
 
-    /* Home slider  */
+    /* Banner top zone  */
+    .banner-topzone-img {
+        width: 100%;
+        height: 50px;
+    }
 
+    /* Home slider  */
+    .home-wrapper {
+        top: -200px;
+        /* bottom: ;100px */
+        overflow: scroll;
+    }
+
+    .home-slider {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: transform .5s linear;
+        user-select: none;
+        border-radius: 0;
+        flex-direction: row;
+    }
+
+    .home-slider-item {
+        width: 100%;
+        white-space: nowrap;
+        /* flex: 1 0 100%; */
+        display: flex;
+    }
+
+    .home-slider-one {
+        flex: 1 0 100%;
+    }
+
+    .home-slider-img {
+        border-radius: 0;
+    }
 
     /* Home slider  */
 
     /* Home promotion  */
     .option-promotion {
-        margin-top: -270px;
+        margin-top: -180px;
         background-color: white;
         width: 100%;
         display: flex;
@@ -283,6 +305,7 @@
 
     .hot-product.flash-sale .product-item {
         padding: 4px 4px 0;
+        margin-bottom: 4px;
     }
 
 
@@ -304,6 +327,7 @@
         margin-bottom: 2000px;
     }
 
+
     .hot-product.xiaomi-product .product-info {
         background-color: var(--white-color);
         margin-top: 0;
@@ -316,9 +340,12 @@
     }
 
     .hot-product.xiaomi-product .product-item {
-        padding: 4px 4px 0;
+        padding: 4px;
     }
 
+    .hot-product.xiaomi-product .product-item .item {
+        padding: 0;
+    }
 
     .hot-product.xiaomi-product .item,
     .hot-product .item {
@@ -350,7 +377,7 @@
     }
 
     .product-item .item {
-        box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.08);
+        /* box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.08); */
     }
 
     .price-discount {

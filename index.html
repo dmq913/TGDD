@@ -1423,7 +1423,7 @@
                 <div class="discount-payonl">
                     <p class="name-box">Giảm thêm khi thanh toán online</p>
                     <div class="box-wrapper">
-                        <div class="home-slider js-home-slider">
+                        <div class="home-slider-dis js-home-slider">
                             <div class="box-image">
                                 <img src="./assets/image/discount-payonl/380x200-380x200-1.webp" alt=""
                                     class="discount-img">
@@ -1938,19 +1938,31 @@
         const homeSliderItem = document.querySelectorAll(".home-slider-item");
         const homeSliderLength = homeSliderItem.length;
         const homeSilderItemWidth = homeSliderItem[0].clientWidth;
+        const homeSliderOneWidth = document.querySelector(".home-slider-one").clientWidth;
 
         const homeSlider = document.querySelector(".home-slider");
 
         let transformX = 0;
         let countItem = 0;
         function autoChangeSlide() {
-            countItem++;
-            transformX += homeSilderItemWidth;
-            if (countItem >= homeSliderLength) {
-                countItem = 0;
-                transformX = 0;
+            if (screen.width < 1200) {
+                countItem++;
+                transformX += homeSliderOneWidth;
+                if (countItem >= 4) {
+                    countItem = 0;
+                    transformX = 0;
+                }
+                homeSlider.style.transform = `translateX(${-transformX}px)`;
             }
-            homeSlider.style.transform = `translateX(${-transformX}px)`;
+            else {
+                countItem++;
+                transformX += homeSilderItemWidth;
+                if (countItem >= homeSliderLength) {
+                    countItem = 0;
+                    transformX = 0;
+                }
+                homeSlider.style.transform = `translateX(${-transformX}px)`;
+            }
         }
 
         setInterval(autoChangeSlide, 2000);
